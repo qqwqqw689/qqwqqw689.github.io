@@ -163,7 +163,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-05-07 10:56:04</span>
+        <span class="pc">2023-05-07 11:54:49</span>
     </span>
     
     
@@ -187,7 +187,21 @@
 
 <h1 id="assembly-language-program"><a href="#assembly-language-program" class="headerlink" title="assembly-language program"></a>assembly-language program</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">	.file	&quot;my.c&quot;</span><br><span class="line">	.text</span><br><span class="line">	.section	.rodata</span><br><span class="line">.LC0:</span><br><span class="line">	.string	&quot;Hello world!&quot;</span><br><span class="line">	.text</span><br><span class="line">	.globl	main</span><br><span class="line">	.type	main, @function</span><br><span class="line">main:</span><br><span class="line">.LFB6:</span><br><span class="line">	.cfi_startproc</span><br><span class="line">	endbr64</span><br><span class="line">	pushq	%rbp</span><br><span class="line">	.cfi_def_cfa_offset 16</span><br><span class="line">	.cfi_offset 6, -16</span><br><span class="line">	movq	%rsp, %rbp</span><br><span class="line">	.cfi_def_cfa_register 6</span><br><span class="line">	leaq	.LC0(%rip), %rax</span><br><span class="line">	movq	%rax, %rdi</span><br><span class="line">	call	puts@PLT</span><br><span class="line">	movl	$0, %eax</span><br><span class="line">	popq	%rbp</span><br><span class="line">	.cfi_def_cfa 7, 8</span><br><span class="line">	ret</span><br><span class="line">	.cfi_endproc</span><br><span class="line">.LFE6:</span><br><span class="line">	.size	main, .-main</span><br><span class="line">	.ident	&quot;GCC: (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0&quot;</span><br><span class="line">	.section	.note.GNU-stack,&quot;&quot;,@progbits</span><br><span class="line">	.section	.note.gnu.property,&quot;a&quot;</span><br><span class="line">	.align 8</span><br><span class="line">	.long	1f - 0f</span><br><span class="line">	.long	4f - 1f</span><br><span class="line">	.long	5</span><br><span class="line">0:</span><br><span class="line">	.string	&quot;GNU&quot;</span><br><span class="line">1:</span><br><span class="line">	.align 8</span><br><span class="line">	.long	0xc0000002</span><br><span class="line">	.long	3f - 2f</span><br><span class="line">2:</span><br><span class="line">	.long	0x3</span><br><span class="line">3:</span><br><span class="line">	.align 8</span><br><span class="line">4:</span><br></pre></td></tr></table></figure>
 
-<h1 id="Explain"><a href="#Explain" class="headerlink" title="Explain"></a>Explain</h1>
+<h1 id="Explain"><a href="#Explain" class="headerlink" title="Explain"></a>Explain</h1><h2 id="Pseudo-Operations"><a href="#Pseudo-Operations" class="headerlink" title="Pseudo Operations"></a>Pseudo Operations</h2><p>.file “string”</p>
+<p>The .file op creates a symbol table entry where string is the symbol name and STT_FILE is the symbol table type. string specifies the name of the source file associated with the object file.</p>
+<p>.text</p>
+<p>The .text pseudo op defines the current section as .text.</p>
+<p>.section section_name [, attributes]</p>
+<p>Makes the specified section the current section.</p>
+<p>If section_name does not exist, a new section with the specified name and attributes is created.</p>
+<p>If section_name is a non-reserved section, attributes must be included the first time it is specified by the .section directive.</p>
+<p>.rodata</p>
+<p> read-only data segment</p>
+<p> .string “str”</p>
+<p>This pseudo op places the characters in str into the object module at the current location and terminates the string with a null. The string must be enclosed in double quotes (“”). This pseudo op is not valid for the .bss section.</p>
+<p>.globl symbol [, symbol]*</p>
+<p>The globl op declares each symbol in the list to be global; that is, each symbol is either defined externally or defined in the input file and accessible in other files; default bindings for the symbol are overridden.</p>
+
             </div>
 
             
