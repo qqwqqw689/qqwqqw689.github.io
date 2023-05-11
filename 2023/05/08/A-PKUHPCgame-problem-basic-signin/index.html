@@ -176,7 +176,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-05-08 21:30:55</span>
+        <span class="pc">2023-05-11 11:53:06</span>
     </span>
     
     
@@ -204,9 +204,9 @@
 <h2 id="Submit-request"><a href="#Submit-request" class="headerlink" title="Submit request"></a>Submit request</h2><p>Please submit a script file (allowed format: Shell script or Python script), which needs to meet the following requirements:</p>
 <p>Have a shebang at the top of the file that indicates how to run the script (example: usually for a Bash script #!&#x2F;bin&#x2F;bash)</p>
 <p>The script needs to complete the following tasks:</p>
-<p>Run Li Hua’s program ( ) on the computing node .&#x2F;program. This program receives a command line parameter. When calling the script you wrote, this parameter will also be passed in. If you write a shell script, you can use $1to node should be located at Partitioncompute , configured as one machine, one core ( -N1 -n1 -c1)</p>
-<p>redirect the program’s output tooutput.dat</p>
-<p>Use seffthe command to view the resource usage of running this Job, and redirect the output toseff.dat</p>
+<p>Run Li Hua’s program ( ) on the computing node .&#x2F;program. This program receives a command line parameter. When calling the script you wrote, this parameter will also be passed in. If you write a shell script, you can use $ 1to node should be located at Partitioncompute , configured as one machine, one core ( -N1 -n1 -c1)</p>
+<p>redirect the program’s output to output.dat</p>
+<p>Use seff the command to view the resource usage of running this Job, and redirect the output to seff.dat</p>
 <p>Note: Li Hua will not use it sbatch, so your program is executed directly on the login node!</p>
 <h2 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h2><p>In order to reduce your workload, Li Hua’s program will obtain the Slurm Job ID and output it to job_id.data file .</p>
 <p>Li Hua’s program will not output to stderr, only to stdout.<br>In a shell script, pass the contents of a file as part of a command argument:</p>
@@ -225,7 +225,10 @@
 <p>-n</p>
 <p>Specify only the number of processes to run with -n.</p>
 <p>-c</p>
-<p>Request that ncpus be allocated per process.</p>
+<p>Request that ncpus be allocated per process. </p>
+</li>
+<li><p>$(command)</p>
+<p> Command substitution allows the output of a command to replace the command itself.</p>
 </li>
 </ol>
 
