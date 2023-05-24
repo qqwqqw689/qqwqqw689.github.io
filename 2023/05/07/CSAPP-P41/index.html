@@ -176,7 +176,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-05-10 14:24:20</span>
+        <span class="pc">2023-05-24 20:08:31</span>
     </span>
     
     
@@ -219,8 +219,10 @@
 <h3 id="globl-symbol-symbol"><a href="#globl-symbol-symbol" class="headerlink" title=".globl symbol [, symbol]*"></a>.globl symbol [, symbol]*</h3><p>The globl op declares each symbol in the list to be global; that is, each symbol is either defined externally or defined in the input file and accessible in other files; default bindings for the symbol are overridden.</p>
 <h3 id="type-symbol-symbol-…-symbol-type-visibility"><a href="#type-symbol-symbol-…-symbol-type-visibility" class="headerlink" title=".type symbol[, symbol, …, symbol], type[, visibility]"></a>.type symbol[, symbol, …, symbol], type[, visibility]</h3><p>Declares the type of symbol.</p>
 <h3 id="cfi-startproc"><a href="#cfi-startproc" class="headerlink" title=".cfi_startproc"></a>.cfi_startproc</h3><p>Include this directive at the start of each function that is to have an entry in .</p>
-<h3 id="cfi-def-cfa-offset-OFFSET"><a href="#cfi-def-cfa-offset-OFFSET" class="headerlink" title=".cfi_def_cfa_offset OFFSET"></a>.cfi_def_cfa_offset OFFSET</h3><p>The .cfi_def_cfa_offset directive, modifies the rule for computing CFA. The value of the register remains the same, but OFFSET is new. </p>
-<p>the CFA is defined to be the value of the stack pointer at the call site in the previous frame</p>
+<h3 id="cfi-def-cfa-offset-OFFSET"><a href="#cfi-def-cfa-offset-OFFSET" class="headerlink" title=".cfi_def_cfa_offset OFFSET"></a>.cfi_def_cfa_offset OFFSET</h3><p>The .cfi_def_cfa_offset directive, modifies the rule for computing CFA. The value of the register remains the same, but OFFSET is new. Note that this is the absolute offset that will be added to a defined register to compute the CFA address.</p>
+<p>CFA : Canonical Frame Address </p>
+<h3 id="cfi-offset-register-offset"><a href="#cfi-offset-register-offset" class="headerlink" title=".cfi_offset register, offset"></a>.cfi_offset register, offset</h3><p>Previous value of register is saved at offset offset from CFA.</p>
+<p>6 -&gt; Stack Base Pointer register (BP). Used to point to the base of the stack. (%rbp)</p>
 
             </div>
 
